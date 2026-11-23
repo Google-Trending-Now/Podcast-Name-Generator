@@ -1,0 +1,2900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcast Name Generator — Free Podcast Title Ideas Tool</title>
+  <meta name="description" content="Generate catchy podcast names in seconds with our free podcast name generator. Filter by niche, tone, and style, then check Apple Podcasts and Spotify." />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Podcast Name Generator — Free Podcast Title Ideas Tool" />
+  <meta property="og:description" content="Brainstorm catchy, realistic podcast title ideas by niche, tone, and naming style. Save favorites and check Apple Podcasts and Spotify in one click." />
+  <meta property="og:site_name" content="Podcast Name Generator" />
+  <meta property="og:url" content="https://example.com/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Podcast Name Generator — Free Podcast Title Ideas Tool" />
+  <meta name="twitter:description" content="Free podcast naming tool for creators. Generate 14 realistic podcast name ideas per click and check availability on Apple Podcasts and Spotify." />
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e1b4b'/%3E%3Crect x='25' y='13' width='14' height='24' rx='7' fill='%23ffffff'/%3E%3Cpath d='M18 30v2a14 14 0 0 0 28 0v-2' fill='none' stroke='%23f97316' stroke-width='4.5' stroke-linecap='round'/%3E%3Cpath d='M32 46v7M24 53h16' fill='none' stroke='%23ffffff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Schema.org: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Podcast Name Generator",
+    "url": "https://example.com/",
+    "description": "Free online podcast name generator that creates catchy podcast title ideas filtered by topic, niche, tone, and naming style, with instant character counts and Apple Podcasts and Spotify checks.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long should a podcast name be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aim for 2 to 4 words, or under 30 characters. Apple Podcasts and Spotify start cutting off longer titles on phone screens, especially inside browse carousels and lock-screen players. Short titles are also much easier to read on small cover art."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I put the word \"Podcast\" in my show title?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually, no. Listeners are already inside a podcast app when they find your show, so adding \"Podcast\" at the end wastes character space. The only exception is if your name sounds confusing without it or if the word \"Show\" or \"Podcast\" is part of the rhythm you want."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I check if a podcast name is already taken?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Search the exact title on both Apple Podcasts and Spotify first—those two directories catch most active and dormant shows. Next, check Google, Instagram, TikTok, YouTube, and the USPTO trademark database (TESS) if you plan to monetize or sell merch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change my podcast name later on Apple Podcasts and Spotify?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Updating the title in your podcast host updates your RSS feed, and Apple Podcasts and Spotify typically reflect the change within 24 to 48 hours. Still, rebranding after you have listeners can hurt word-of-mouth referrals, so it pays to settle on a solid title before episode one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should my podcast name include keywords for search?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you run an educational, business, or niche how-to show, putting one clear topic word in the title or subtitle helps people find you in Apple and Spotify search. Just keep it natural—Apple actively rejects shows that stuff a string of comma-separated keywords into the title field."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-subtle: #f1f5f9;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --ink: #0f172a;
+      --ink-secondary: #334155;
+      --ink-muted: #64748b;
+      --indigo: #3730a3;
+      --indigo-hover: #312e81;
+      --indigo-soft: #eef2ff;
+      --coral: #ea580c;
+      --coral-soft: #fff7ed;
+      --amber: #b45309;
+      --green: #15803d;
+      --focus: #4338ca;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --container: 1180px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Skip Link */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--ink);
+      color: #ffffff;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      z-index: 100;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      left: 16px;
+      top: 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Focus states */
+    :focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header: Strict 3-zone top bar */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      height: 64px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .brand-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .site-nav a {
+      color: var(--ink-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: color 160ms var(--ease), border-color 160ms var(--ease);
+    }
+
+    .site-nav a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--border-strong);
+    }
+
+    .saved-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      padding: 8px 14px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      min-height: 40px;
+      transition: background-color 160ms var(--ease), border-color 160ms var(--ease), transform 140ms var(--ease);
+    }
+
+    .saved-trigger:hover {
+      background: var(--surface-subtle);
+      border-color: var(--ink-muted);
+    }
+
+    .saved-trigger:active {
+      transform: translateY(1px);
+    }
+
+    .saved-count {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      color: var(--coral);
+      font-weight: 700;
+    }
+
+    /* Hero + Studio Tool (Above the fold) */
+    .tool-section {
+      padding: 28px 0 48px;
+    }
+
+    .hero-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--ink);
+      text-wrap: balance;
+    }
+
+    .hero-subtitle {
+      margin: 6px 0 0;
+      color: var(--ink-secondary);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+
+    /* Studio Control Panel */
+    .studio-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 24px;
+      margin-bottom: 24px;
+    }
+
+    .controls-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(210px, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+    }
+
+    .field-hint {
+      font-weight: 400;
+      color: var(--ink-muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .text-input,
+    .select-input {
+      width: 100%;
+      height: 44px;
+      padding: 0 14px;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      transition: border-color 160ms var(--ease), box-shadow 160ms var(--ease);
+    }
+
+    .text-input::placeholder {
+      color: #94a3b8;
+    }
+
+    .text-input:hover,
+    .select-input:hover {
+      border-color: var(--ink-muted);
+    }
+
+    .text-input:focus,
+    .select-input:focus {
+      outline: none;
+      border-color: var(--indigo);
+      box-shadow: 0 0 0 3px rgba(55, 48, 163, 0.14);
+    }
+
+    .select-input {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 44px;
+      padding: 0 22px;
+      background: var(--indigo);
+      color: #ffffff;
+      border: 1px solid var(--indigo);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 160ms var(--ease), transform 140ms var(--ease);
+    }
+
+    .primary-btn:hover {
+      background: var(--indigo-hover);
+    }
+
+    .primary-btn:active {
+      transform: translateY(1px);
+    }
+
+    /* Quick topic suggestions */
+    .quick-topics {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px 10px;
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+
+    .quick-topic-btn {
+      background: none;
+      border: none;
+      padding: 2px 0;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: var(--border-strong);
+      text-underline-offset: 3px;
+      transition: color 140ms var(--ease), text-decoration-color 140ms var(--ease);
+    }
+
+    .quick-topic-btn:hover {
+      color: var(--indigo);
+      text-decoration-color: var(--indigo);
+    }
+
+    .sep {
+      color: var(--border-strong);
+      user-select: none;
+    }
+
+    /* Tone & Style Segmented Controls */
+    .controls-bottom {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .group-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .segmented-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      background: var(--surface-subtle);
+      padding: 4px;
+      border-radius: var(--radius-md);
+    }
+
+    .seg-btn {
+      flex: 1 0 auto;
+      padding: 7px 9px;
+      min-height: 36px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+      text-align: center;
+      transition: background-color 150ms var(--ease), color 150ms var(--ease), border-color 150ms var(--ease);
+    }
+
+    .seg-btn:hover {
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.65);
+    }
+
+    .seg-btn[aria-pressed="true"] {
+      background: var(--surface);
+      color: var(--indigo);
+      font-weight: 600;
+      border-color: var(--border);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+    }
+
+    /* Results Header */
+    .results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .results-meta {
+      margin: 0;
+      font-size: 14px;
+      color: var(--ink-secondary);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .results-meta strong {
+      color: var(--ink);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .results-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ghost-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      padding: 7px 13px;
+      min-height: 38px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 150ms var(--ease), border-color 150ms var(--ease);
+    }
+
+    .ghost-btn:hover {
+      background: var(--surface);
+      border-color: var(--ink-muted);
+    }
+
+    /* Results Grid */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .name-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      transition: border-color 160ms var(--ease);
+    }
+
+    .name-card:hover {
+      border-color: var(--border-strong);
+    }
+
+    .name-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .name-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+      color: var(--ink);
+      word-break: break-word;
+    }
+
+    .name-meta {
+      margin: 5px 0 0;
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .length-status {
+      font-weight: 500;
+    }
+
+    .length-status.is-optimal {
+      color: var(--green);
+    }
+
+    .length-status.is-good {
+      color: var(--ink-secondary);
+    }
+
+    .length-status.is-long {
+      color: var(--amber);
+    }
+
+    .name-card-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+      flex-wrap: wrap;
+    }
+
+    .action-cluster {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 36px;
+      padding: 6px 11px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 150ms var(--ease), border-color 150ms var(--ease), color 150ms var(--ease);
+    }
+
+    .card-btn:hover {
+      background: var(--surface-subtle);
+      border-color: var(--border-strong);
+    }
+
+    .card-btn.is-copied {
+      background: #f0fdf4;
+      border-color: #86efac;
+      color: var(--green);
+    }
+
+    .card-btn.is-saved {
+      background: var(--coral-soft);
+      border-color: #fdba74;
+      color: #c2410c;
+    }
+
+    .check-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12.5px;
+    }
+
+    .check-link {
+      color: var(--ink-muted);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 0;
+      white-space: nowrap;
+      transition: color 140ms var(--ease);
+    }
+
+    .check-link:hover {
+      color: var(--indigo);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Editorial Sections Below the Fold */
+    .editorial-section {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .editorial-section.alt-bg {
+      background: var(--surface);
+    }
+
+    .section-header {
+      max-width: 68ch;
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      color: var(--ink);
+      text-wrap: balance;
+    }
+
+    .section-lead {
+      margin: 0;
+      color: var(--ink-secondary);
+      font-size: 16px;
+    }
+
+    /* 4 Tips Grid */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 36px;
+    }
+
+    .tip-item {
+      padding-top: 18px;
+      border-top: 1px solid var(--border-strong);
+    }
+
+    .tip-number {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--coral);
+      font-variant-numeric: tabular-nums;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .tip-item h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+
+    .tip-item p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+    }
+
+    /* Interactive Pre-Launch Checklist */
+    .checklist-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+      gap: 40px;
+      align-items: start;
+    }
+
+    .checklist-progress {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--ink-secondary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .progress-track {
+      margin-top: 8px;
+      width: 100%;
+      max-width: 320px;
+      height: 6px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--indigo);
+      transition: width 200ms var(--ease);
+    }
+
+    .checklist-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .checklist-row {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .checklist-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 4px;
+      cursor: pointer;
+    }
+
+    .checklist-checkbox {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--indigo);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .checklist-text strong {
+      display: block;
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .checklist-text span {
+      display: block;
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.55;
+    }
+
+    .checklist-checkbox:checked + .checklist-text strong {
+      text-decoration: line-through;
+      color: var(--ink-muted);
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      max-width: 780px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary:hover {
+      color: var(--indigo);
+    }
+
+    .faq-chevron {
+      width: 18px;
+      height: 18px;
+      color: var(--ink-muted);
+      flex-shrink: 0;
+      transition: transform 180ms var(--ease);
+    }
+
+    .faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+      color: var(--indigo);
+    }
+
+    .faq-answer {
+      margin: 0 0 20px;
+      padding-right: 28px;
+      font-size: 15px;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13.5px;
+      color: var(--ink-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-link-btn {
+      background: none;
+      border: none;
+      padding: 4px 0;
+      font-family: inherit;
+      font-size: 13.5px;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .footer-link-btn:hover {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Saved Names Drawer */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.42);
+      z-index: 60;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms var(--ease);
+    }
+
+    .drawer-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .saved-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(440px, 100vw);
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      z-index: 70;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 200ms var(--ease);
+    }
+
+    .saved-drawer.is-open {
+      transform: translateX(0);
+    }
+
+    .drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-head h2 {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .icon-close-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--ink-secondary);
+      cursor: pointer;
+    }
+
+    .icon-close-btn:hover {
+      background: var(--surface-subtle);
+      color: var(--ink);
+    }
+
+    .drawer-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 20px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 20px;
+    }
+
+    .saved-empty {
+      text-align: left;
+      padding: 28px 4px;
+      color: var(--ink-secondary);
+      font-size: 14.5px;
+    }
+
+    .saved-empty strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 6px;
+      font-size: 15.5px;
+    }
+
+    .saved-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .saved-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .saved-item-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .saved-item-name {
+      font-weight: 600;
+      font-size: 15.5px;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .saved-item-chars {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .saved-item-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .text-action {
+      background: none;
+      border: none;
+      padding: 4px 0;
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      cursor: pointer;
+    }
+
+    .text-action:hover {
+      color: var(--indigo);
+    }
+
+    .text-action.is-danger:hover {
+      color: #b91c1c;
+    }
+
+    /* Info Dialog (Privacy / Terms / Contact) */
+    dialog.info-dialog {
+      width: min(500px, calc(100vw - 32px));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 0;
+      color: var(--ink);
+      background: var(--surface);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+    }
+
+    dialog.info-dialog::backdrop {
+      background: rgba(15, 23, 42, 0.45);
+    }
+
+    .dialog-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dialog-head h2 {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .dialog-content {
+      padding: 18px 20px 22px;
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+    }
+
+    .dialog-content p {
+      margin: 0 0 12px;
+    }
+
+    .dialog-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Screen-reader live region */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1120px) {
+      .controls-bottom {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .controls-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .controls-top .primary-btn {
+        grid-column: 1 / -1;
+        width: 100%;
+      }
+
+      .checklist-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header-inner {
+        height: 58px;
+        gap: 12px;
+      }
+
+      .site-nav {
+        display: none;
+      }
+
+      .brand {
+        font-size: 15.5px;
+      }
+
+      .saved-trigger {
+        padding: 6px 11px;
+        font-size: 13px;
+        min-height: 40px;
+      }
+
+      .tool-section {
+        padding: 18px 0 36px;
+      }
+
+      .studio-panel {
+        padding: 16px;
+      }
+
+      .controls-top {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .text-input,
+      .select-input {
+        font-size: 14.5px;
+      }
+
+      .results-grid,
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .seg-btn {
+        flex: 0 1 auto;
+        min-height: 40px;
+        padding: 8px 11px;
+        font-size: 13px;
+      }
+
+      .card-btn {
+        min-height: 40px;
+        padding: 8px 12px;
+      }
+
+      .editorial-section {
+        padding: 40px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#generator" class="skip-link">Skip to podcast name generator</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#generator" class="brand" aria-label="Podcast Name Generator home">
+        <svg class="brand-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1e1b4b" />
+          <rect x="12.5" y="6.5" width="7" height="12" rx="3.5" fill="#ffffff" />
+          <path d="M9 15v1a7 7 0 0 0 14 0v-1" stroke="#f97316" stroke-width="2.2" stroke-linecap="round" />
+          <path d="M16 23v3.5M12 26.5h8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <span>Podcast Name Generator</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#generator">Generator</a>
+        <a href="#naming-guide">Naming Guide</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button
+        type="button"
+        id="openSavedBtn"
+        class="saved-trigger"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="savedDrawer"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+        </svg>
+        <span>Saved (<span id="savedCount" class="saved-count">0</span>)</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Above-the-Fold Studio Tool -->
+    <section id="generator" class="tool-section" aria-labelledby="pageTitle">
+      <div class="container">
+        <div class="hero-head">
+          <div>
+            <h1 id="pageTitle" class="hero-title">Podcast Name Generator</h1>
+            <p class="hero-subtitle">Enter your topic, pick a niche and tone, and get 14 realistic podcast title ideas built for Apple Podcasts and Spotify.</p>
+          </div>
+        </div>
+
+        <form id="generatorForm" class="studio-panel" novalidate>
+          <div class="controls-top">
+            <div class="field">
+              <label for="topicInput" class="field-label">
+                <span>Topic or Keyword</span>
+                <span class="field-hint">Optional</span>
+              </label>
+              <input
+                type="text"
+                id="topicInput"
+                name="topic"
+                class="text-input"
+                placeholder="e.g., personal finance, true crime, parenting"
+                autocomplete="off"
+                maxlength="60"
+              />
+            </div>
+
+            <div class="field">
+              <label for="categorySelect" class="field-label">Category / Niche</label>
+              <select id="categorySelect" name="category" class="select-input">
+                <option value="business-tech">Business &amp; Tech</option>
+                <option value="true-crime">True Crime</option>
+                <option value="comedy">Comedy</option>
+                <option value="self-improvement">Self-Improvement</option>
+                <option value="sports">Sports</option>
+                <option value="health-wellness">Health &amp; Wellness</option>
+                <option value="history">History</option>
+                <option value="pop-culture">Pop Culture</option>
+                <option value="storytelling">Storytelling</option>
+              </select>
+            </div>
+
+            <button type="submit" id="generateBtn" class="primary-btn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+                <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                <path d="M16 16h5v5" />
+              </svg>
+              <span>Generate Names</span>
+            </button>
+          </div>
+
+          <div class="quick-topics" aria-label="Example topics">
+            <span>Try:</span>
+            <button type="button" class="quick-topic-btn" data-topic="personal finance" data-category="business-tech">personal finance</button>
+            <span class="sep" aria-hidden="true">·</span>
+            <button type="button" class="quick-topic-btn" data-topic="cold cases" data-category="true-crime">cold cases</button>
+            <span class="sep" aria-hidden="true">·</span>
+            <button type="button" class="quick-topic-btn" data-topic="parenting" data-category="comedy">parenting</button>
+            <span class="sep" aria-hidden="true">·</span>
+            <button type="button" class="quick-topic-btn" data-topic="marathon running" data-category="sports">marathon running</button>
+            <span class="sep" aria-hidden="true">·</span>
+            <button type="button" class="quick-topic-btn" data-topic="sleep habits" data-category="health-wellness">sleep habits</button>
+          </div>
+
+          <div class="controls-bottom">
+            <div class="control-group">
+              <span id="toneLabel" class="group-label">Vibe / Tone</span>
+              <div class="segmented-bar" role="group" aria-labelledby="toneLabel" id="toneGroup">
+                <button type="button" class="seg-btn" data-tone="witty" aria-pressed="true">Witty &amp; Clever</button>
+                <button type="button" class="seg-btn" data-tone="professional" aria-pressed="false">Professional</button>
+                <button type="button" class="seg-btn" data-tone="casual" aria-pressed="false">Casual &amp; Friendly</button>
+                <button type="button" class="seg-btn" data-tone="bold" aria-pressed="false">Bold &amp; Edgy</button>
+                <button type="button" class="seg-btn" data-tone="mysterious" aria-pressed="false">Mysterious</button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <span id="styleLabel" class="group-label">Name Style</span>
+              <div class="segmented-bar" role="group" aria-labelledby="styleLabel" id="styleGroup">
+                <button type="button" class="seg-btn" data-style="all" aria-pressed="true">All Styles</button>
+                <button type="button" class="seg-btn" data-style="short" aria-pressed="false">Short &amp; Punchy</button>
+                <button type="button" class="seg-btn" data-style="alliteration" aria-pressed="false">Alliteration</button>
+                <button type="button" class="seg-btn" data-style="question" aria-pressed="false">Question-Based</button>
+                <button type="button" class="seg-btn" data-style="minimalist" aria-pressed="false">Modern Minimalist</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="results-bar">
+          <p id="resultsSummary" class="results-meta" aria-live="polite">
+            Showing <strong>14</strong> podcast name ideas
+          </p>
+          <div class="results-actions">
+            <button type="button" id="shuffleBtn" class="ghost-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 3 21 3 21 8" />
+                <line x1="4" y1="20" x2="21" y2="3" />
+                <polyline points="21 16 21 21 16 21" />
+                <line x1="15" y1="15" x2="21" y2="21" />
+                <line x1="4" y1="4" x2="9" y2="9" />
+              </svg>
+              <span>More Ideas</span>
+            </button>
+          </div>
+        </div>
+
+        <ul id="resultsGrid" class="results-grid" data-testid="results-grid" aria-label="Generated podcast names"></ul>
+      </div>
+    </section>
+
+    <!-- Below-the-Fold Section 1: Practical Naming Guide -->
+    <section id="naming-guide" class="editorial-section alt-bg" aria-labelledby="guideHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="guideHeading" class="section-title">How to Pick a Podcast Name That Actually Sticks</h2>
+          <p class="section-lead">Most listeners discover new shows through word of mouth or a quick search inside Spotify and Apple Podcasts. Use these four producer-tested rules before you design your cover art.</p>
+        </div>
+
+        <div class="tips-grid">
+          <article class="tip-item">
+            <span class="tip-number">01</span>
+            <h3>Pass the "Bar Test"</h3>
+            <p>Say your title out loud to a friend across a noisy room. If they have to ask how to spell it—or if it uses clever misspellings like "Kast" or "Lyfe"—they will never find your show later when they open their phone.</p>
+          </article>
+
+          <article class="tip-item">
+            <span class="tip-number">02</span>
+            <h3>Respect the 30-Character Cutoff</h3>
+            <p>Apple Podcasts and Spotify truncate long show names on mobile browse screens and lock-screen players. Keep your core title under 30 characters so the best part of the name stays visible everywhere.</p>
+          </article>
+
+          <article class="tip-item">
+            <span class="tip-number">03</span>
+            <h3>Skip Generic Filler Words</h3>
+            <p>Words like "Ultimate," "Everything," "Chronicles," or tacking "The ___ Podcast" onto a broad topic make your show blend into hundreds of inactive feeds. Pair one clear subject word with a specific angle, mood, or point of view.</p>
+          </article>
+
+          <article class="tip-item">
+            <span class="tip-number">04</span>
+            <h3>Leave Yourself Room to Grow</h3>
+            <p>Naming a show "2026 Side Hustles for College Juniors" feels focused on day one, then boxes you in by episode twenty. Pick a title tied to the ongoing curiosity behind your show, not a single trend or year.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Below-the-Fold Section 2: Interactive Pre-Launch Checklist -->
+    <section id="checklist" class="editorial-section" aria-labelledby="checklistHeading">
+      <div class="container checklist-layout">
+        <div>
+          <h2 id="checklistHeading" class="section-title">Quick Checklist Before You Lock In Your Title</h2>
+          <p class="section-lead">Once you narrow your shortlist down to two or three favorites, run this five-minute availability check before buying a mic stand or recording a trailer.</p>
+          <div class="checklist-progress" id="checklistStatus" aria-live="polite">0 of 5 checks completed</div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="checklistBar" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <ul class="checklist-list" id="launchChecklist">
+          <li class="checklist-row">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-checkbox" data-check-id="directories" />
+              <span class="checklist-text">
+                <strong>Search Apple Podcasts and Spotify</strong>
+                <span>Use the Apple and Spotify links on each generated name above. Even an abandoned show with an identical name can siphon off listeners searching for you.</span>
+              </span>
+            </label>
+          </li>
+          <li class="checklist-row">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-checkbox" data-check-id="domain" />
+              <span class="checklist-text">
+                <strong>Check domain availability</strong>
+                <span>Look for a clean .com or .show domain. If the exact match is parked, adding "show" or "pod" at the end of the URL works fine as long as the domain is easy to say on air.</span>
+              </span>
+            </label>
+          </li>
+          <li class="checklist-row">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-checkbox" data-check-id="socials" />
+              <span class="checklist-text">
+                <strong>Claim matching social handles</strong>
+                <span>Check Instagram, YouTube, TikTok, and X so your video clips and show notes live under a consistent handle people recognize.</span>
+              </span>
+            </label>
+          </li>
+          <li class="checklist-row">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-checkbox" data-check-id="trademark" />
+              <span class="checklist-text">
+                <strong>Run a quick trademark search</strong>
+                <span>Search the USPTO database (TESS) for live trademarks in entertainment or media classes—especially if you plan to take sponsorships or sell products under the show name.</span>
+              </span>
+            </label>
+          </li>
+          <li class="checklist-row">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-checkbox" data-check-id="voice" />
+              <span class="checklist-text">
+                <strong>Record a 10-second intro test</strong>
+                <span>Say "Welcome back to [Your Show Name]" into your phone voice memos. If it feels clunky to say once, it will drive you crazy by episode fifty.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Below-the-Fold Section 3: FAQ -->
+    <section id="faq" class="editorial-section alt-bg" aria-labelledby="faqHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="faqHeading" class="section-title">Frequently Asked Questions</h2>
+          <p class="section-lead">Straight answers to the naming questions independent hosts ask most before submitting their RSS feed.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span>How long should a podcast name be?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="faq-answer">Aim for 2 to 4 words, or under 30 characters. Apple Podcasts and Spotify start cutting off longer titles on phone screens, especially inside browse carousels and lock-screen players. Short titles are also much easier to read on small cover art.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Should I put the word "Podcast" in my show title?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="faq-answer">Usually, no. Listeners are already inside a podcast app when they find your show, so adding "Podcast" at the end wastes character space. The only exception is if your name sounds confusing without it or if the word "Show" or "Podcast" is part of the rhythm you want.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How do I check if a podcast name is already taken?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="faq-answer">Search the exact title on both Apple Podcasts and Spotify first—those two directories catch most active and dormant shows. Next, check Google, Instagram, TikTok, YouTube, and the USPTO trademark database (TESS) if you plan to monetize or sell merch.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can I change my podcast name later on Apple Podcasts and Spotify?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="faq-answer">Yes. Updating the title in your podcast host updates your RSS feed, and Apple Podcasts and Spotify typically reflect the change within 24 to 48 hours. Still, rebranding after you have listeners can hurt word-of-mouth referrals, so it pays to settle on a solid title before episode one.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Should my podcast name include keywords for search?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="faq-answer">If you run an educational, business, or niche how-to show, putting one clear topic word in the title or subtitle helps people find you in Apple and Spotify search. Just keep it natural—Apple actively rejects shows that stuff a string of comma-separated keywords into the title field.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p style="margin: 0;">&copy; <span id="footerYear">2026</span> Podcast Name Generator. Free naming tool for independent creators.</p>
+      <div class="footer-links">
+        <button type="button" class="footer-link-btn" data-dialog="privacy">Privacy Policy</button>
+        <button type="button" class="footer-link-btn" data-dialog="terms">Terms</button>
+        <button type="button" class="footer-link-btn" data-dialog="contact">Contact</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Saved Names Slide-Over Drawer -->
+  <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+  <aside
+    id="savedDrawer"
+    class="saved-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="savedDrawerTitle"
+    hidden
+  >
+    <div class="drawer-head">
+      <h2 id="savedDrawerTitle">Saved Podcast Names (<span id="drawerCount">0</span>)</h2>
+      <button type="button" id="closeSavedBtn" class="icon-close-btn" aria-label="Close saved names drawer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-toolbar">
+      <button type="button" id="copyAllSavedBtn" class="card-btn">Copy All Saved</button>
+      <button type="button" id="clearSavedBtn" class="text-action is-danger">Clear All</button>
+    </div>
+
+    <div class="drawer-body">
+      <div id="savedEmpty" class="saved-empty">
+        <strong>No saved names yet</strong>
+        Click Save on any generated podcast title to build a shortlist here. Your list stays saved in this browser.
+      </div>
+      <ul id="savedList" class="saved-list" aria-label="Saved podcast names list"></ul>
+    </div>
+  </aside>
+
+  <!-- Lightweight Footer Info Dialog -->
+  <dialog id="infoDialog" class="info-dialog" aria-labelledby="infoDialogTitle">
+    <div class="dialog-head">
+      <h2 id="infoDialogTitle">Info</h2>
+      <button type="button" id="closeInfoDialogBtn" class="icon-close-btn" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div id="infoDialogBody" class="dialog-content"></div>
+  </dialog>
+
+  <div id="srAnnouncer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* =====================================================================
+       * 1. CURATED STUDIO LEXICON & NAMING ENGINE (100% Client-Side)
+       * ===================================================================== */
+
+      const CATEGORY_DATA = {
+        'business-tech': {
+          label: 'Business & Tech',
+          anchors: ['Startup', 'Founder', 'Margin', 'Signal', 'Product', 'Market', 'Revenue', 'Stack', 'Build', 'Pipeline'],
+          metaphors: ['Ledger', 'Desk', 'Briefing', 'Playbook', 'Cap Table', 'Ship Log', 'Burn Rate', 'Backlog', 'Boardroom', 'Quarter'],
+          verbs: ['Building', 'Shipping', 'Scaling', 'Funding', 'Debugging', 'Pricing', 'Launching'],
+          angles: ['without the pitch deck', 'after Series A', 'in plain English', 'behind the spreadsheet', 'before IPO'],
+          questions: [
+            'Who Actually Pays for {topic}?',
+            'Is {topic} Broken?',
+            'How Do You Scale {topic}?',
+            'What Nobody Tells You About {topic}?',
+            'Why Did That {topic} Bet Work?',
+            'Can {topic} Survive the Hype?',
+            'Where Does the {topic} Money Go?'
+          ]
+        },
+        'true-crime': {
+          label: 'True Crime',
+          anchors: ['Casefile', 'Alibi', 'Evidence', 'Witness', 'Cold Case', 'Verdict', 'Suspect', 'Dossier', 'Detour', 'Precinct'],
+          metaphors: ['Evidence Locker', 'Tape Room', 'Redacted', 'Archive', 'Casebook', 'Night Shift', 'Footprints', 'Dead End', 'Cold Trail'],
+          verbs: ['Tracing', 'Reopening', 'Untangling', 'Tracking', 'Uncovering', 'Following'],
+          angles: ['after midnight', 'in the margins', 'from the evidence box', 'thirty years later', 'off the record'],
+          questions: [
+            'Who Hid the {topic} File?',
+            'What Happened to {topic}?',
+            'Why Did {topic} Go Cold?',
+            'Where Were They During {topic}?',
+            'Did Everyone Miss {topic}?',
+            'Who Really Knew About {topic}?',
+            'What Did the {topic} Tape Catch?'
+          ]
+        },
+        'comedy': {
+          label: 'Comedy',
+          anchors: ['Tangent', 'Group Chat', 'Overthinking', 'Side Quest', 'Hot Take', 'Small Talk', 'Bad Advice', 'Heckle', 'Detour', 'Banter'],
+          metaphors: ['Green Room', 'Back Row', 'Voicemail', 'Text Thread', 'Late Check-In', 'Open Mic', 'Booth', 'Snack Break'],
+          verbs: ['Overthinking', 'Surviving', 'Roasting', 'Defending', 'Explaining', 'Ruining'],
+          angles: ['mildly qualified', 'zero credentials', 'no refunds', 'poorly planned', 'against better judgment'],
+          questions: [
+            'Wait, Why Is {topic} Like This?',
+            'Are We Doing {topic} Wrong?',
+            'Who Put Us in Charge of {topic}?',
+            'Can We Talk About {topic}?',
+            'Is {topic} Actually Worth It?',
+            'Why Does Everyone Lie About {topic}?',
+            'Did {topic} Just Peak?'
+          ]
+        },
+        'self-improvement': {
+          label: 'Self-Improvement',
+          anchors: ['Habit', 'Focus', 'Reset', 'Compound', 'Clarity', 'Friction', 'Routine', 'Craft', 'Margin', 'Momentum'],
+          metaphors: ['Quiet Hours', 'Field Notes', 'Morning Pages', 'Notebook', 'Blueprint', 'Check-In', 'Practice', 'Compass'],
+          verbs: ['Rebuilding', 'Practicing', 'Simplifying', 'Reframing', 'Resetting', 'Designing'],
+          angles: ['one small shift', 'without burnout', 'for real schedules', 'at your own pace', 'every Monday'],
+          questions: [
+            'What Actually Changes {topic}?',
+            'Why Is {topic} So Hard to Keep?',
+            'How Do You Reset {topic}?',
+            'What If {topic} Were Simpler?',
+            'Where Does {topic} Fall Apart?',
+            'Can You Fix {topic} in Ten Minutes?',
+            'Why Does {topic} Feel Stuck?'
+          ]
+        },
+        'sports': {
+          label: 'Sports',
+          anchors: ['Overtime', 'Box Score', 'Tape Room', 'Sideline', 'Playbook', 'Fourth Quarter', 'Roster', 'Matchup', 'Press Box', 'Split'],
+          metaphors: ['Film Room', 'Locker Room', 'Bleachers', 'Warmup', 'Postgame', 'Scoreboard', 'Tunnel', 'Chalk Talk'],
+          verbs: ['Breaking Down', 'Chasing', 'Calling', 'Watching', 'Scouting', 'Clocking'],
+          angles: ['from the cheap seats', 'after the whistle', 'between games', 'by the tape', 'on the clock'],
+          questions: [
+            'Who Won the {topic} Tape?',
+            'Can {topic} Hold Up in October?',
+            'What Changed the {topic} Line?',
+            'Why Does {topic} Still Matter?',
+            'Who Calls {topic} Better?',
+            'Did {topic} Just Shift the Odds?',
+            'What Did the {topic} Replay Miss?'
+          ]
+        },
+        'health-wellness': {
+          label: 'Health & Wellness',
+          anchors: ['Baseline', 'Recovery', 'Rhythm', 'Vitals', 'Stamina', 'Balance', 'Rest', 'Fuel', 'Pulse', 'Habit'],
+          metaphors: ['Checkup', 'Daily Lab', 'Kitchen Table', 'Morning Walk', 'Clinic Notes', 'Reset', 'Field Guide', 'Journal'],
+          verbs: ['Rethinking', 'Measuring', 'Balancing', 'Fueling', 'Restoring', 'Testing'],
+          angles: ['without the fads', 'backed by data', 'for busy weeks', 'real talk', 'day by day'],
+          questions: [
+            'Does {topic} Actually Work?',
+            'What Does Science Say About {topic}?',
+            'Why Is Everyone Tired of {topic}?',
+            'How Do You Fix {topic} Naturally?',
+            'Is Your {topic} Routine Backwards?',
+            'What Helps {topic} Stick?',
+            'Why Does {topic} Feel Complicated?'
+          ]
+        },
+        'history': {
+          label: 'History',
+          anchors: ['Footnote', 'Archive', 'Turning Point', 'Artifact', 'Backstory', 'Chronicle', 'Era', 'Dispatch', 'Paper Trail', 'Timeline'],
+          metaphors: ['Stacks', 'Microfilm', 'Reading Room', 'Footnote', 'Time Capsule', 'Vault', 'Postscript', 'Margin Notes'],
+          verbs: ['Rewinding', 'Digging Up', 'Revisiting', 'Mapping', 'Tracing', 'Recalling'],
+          angles: ['left out of textbooks', 'before the headlines', 'in the footnotes', 'from the archive', 'looking back'],
+          questions: [
+            'How Did {topic} Really Start?',
+            'Who Forgot About {topic}?',
+            'What Happened Before {topic}?',
+            'Why Did {topic} Change Everything?',
+            'Was {topic} Always Like That?',
+            'What Did Textbooks Skip on {topic}?',
+            'How Close Did {topic} Come?'
+          ]
+        },
+        'pop-culture': {
+          label: 'Pop Culture',
+          anchors: ['Deep Cut', 'B-Side', 'Matinee', 'Credits', 'Plot Twist', 'Cult Classic', 'Encore', 'Premiere', 'Soundtrack', 'Rewatch'],
+          metaphors: ['Marquee', 'Liner Notes', 'After Credits', 'Ticket Stub', 'Mixtape', 'Front Row', 'Box Office', 'Watchlist'],
+          verbs: ['Rewatching', 'Rating', 'Debating', 'Dissecting', 'Spinning', 'Defending'],
+          angles: ['after the credits', 'no spoilers', 'worth a rewatch', 'deep cuts only', 'front row'],
+          questions: [
+            'Does {topic} Still Hold Up?',
+            'Why Are We Obsessed With {topic}?',
+            'Who Ruined {topic}?',
+            'Did {topic} Age Well?',
+            'What Made {topic} a Classic?',
+            'Are We Done With {topic}?',
+            'Why Can Nobody Quit {topic}?'
+          ]
+        },
+        'storytelling': {
+          label: 'Storytelling',
+          anchors: ['Porch Light', 'Detour', 'Dispatch', 'Longform', 'First Draft', 'Voice Note', 'Postcard', 'Side Street', 'Chapter', 'Scene'],
+          metaphors: ['Field Tape', 'Porch', 'Notebook', 'Road Map', 'Audio Essay', 'Listening Room', 'Backroad', 'Reel'],
+          verbs: ['Collecting', 'Telling', 'Chasing', 'Remembering', 'Recording', 'Following'],
+          angles: ['in three acts', 'true stories', 'from the road', 'as told by', 'between chapters'],
+          questions: [
+            'How Does {topic} End?',
+            'Who Remembers {topic} Best?',
+            'Where Did {topic} Take You?',
+            'What Stayed After {topic}?',
+            'Why Do We Keep Telling {topic}?',
+            'What Happened Next in {topic}?',
+            'Whose Side of {topic} Is True?'
+          ]
+        }
+      };
+
+      const TONE_DATA = {
+        witty: {
+          label: 'Witty & Clever',
+          prefixes: ['Mildly', 'Slightly', 'Unsolicited', 'Accidental', 'Mostly', 'Reluctant', 'Fine Print', 'Technically', 'Overcaffeinated'],
+          suffixes: ['No Refunds', 'On Purpose', 'In Theory', 'Ish', 'With Receipts', 'Pending Review', 'Probably', 'Explained Poorly'],
+          shortModifiers: ['Fine Print', 'Smart Aleck', 'Dry Run', 'Side Note', 'Plot Hole', 'Second Guess', 'Loose Change'],
+          minimalistTags: ['Notes', 'Pending', 'Annotated', 'Etc.', 'Marginalia', 'Footnote']
+        },
+        professional: {
+          label: 'Professional',
+          prefixes: ['Modern', 'Clear', 'Practical', 'Inside', 'Applied', 'Smart', 'Direct', 'Essential', 'Focused'],
+          suffixes: ['Briefing', 'Desk', 'Review', 'Report', 'Playbook', 'Standard', 'Exchange', 'Weekly', 'Dispatch'],
+          shortModifiers: ['Executive', 'Working', 'Daily', 'Core', 'Field', 'Strategic', 'Candid'],
+          minimalistTags: ['Brief', 'Index', 'Ledger', 'Desk', 'Press', 'Journal']
+        },
+        casual: {
+          label: 'Casual & Friendly',
+          prefixes: ['Honest', 'Sunday', 'Coffee &', 'Everyday', 'Real Talk', 'Kitchen Table', 'Friendly', 'Good Company', 'After Hours'],
+          suffixes: ['Over Coffee', 'With Friends', 'At Home', 'Unpacked', 'Chats', 'Club', 'Hangout', 'Hour', 'Corner'],
+          shortModifiers: ['Easy', 'Open', 'Warm', 'Plain', 'Everyday', 'Neighborly', 'Porch'],
+          minimalistTags: ['Talks', 'Chats', 'Club', 'House', 'Room', 'Table']
+        },
+        bold: {
+          label: 'Bold & Edgy',
+          prefixes: ['Raw', 'Zero Filter', 'Unvarnished', 'Hard Truth', 'No Excuses', 'Blunt', 'Off Script', 'Loud', 'Unfiltered'],
+          suffixes: ['Unfiltered', 'No Filter', 'Raw Cut', 'Uncut', 'Out Loud', 'Off Record', 'Straight Up', 'After Dark'],
+          shortModifiers: ['Blunt', 'Hard', 'Sharp', 'Rogue', 'Direct', 'Stark', 'Unapologetic'],
+          minimalistTags: ['Raw', 'Uncut', 'Cut', 'Wire', 'Edge', 'Signal']
+        },
+        mysterious: {
+          label: 'Mysterious',
+          prefixes: ['Hidden', 'Quiet', 'Lost', 'Vanished', 'After Midnight', 'Shadow', 'Unseen', 'Beneath', 'Silent'],
+          suffixes: ['After Dark', 'In The Shadows', 'Unspoken', 'Files', 'Tapes', 'Underground', 'Midnight', 'Unsolved', 'Signals'],
+          shortModifiers: ['Quiet', 'Dark', 'Lost', 'Secret', 'Faded', 'Hollow', 'Distant'],
+          minimalistTags: ['Tape', 'File', 'Shadow', 'Echo', 'Vault', 'Still']
+        }
+      };
+
+      const STYLE_LABELS = {
+        all: 'All Styles',
+        short: 'Short & Punchy',
+        alliteration: 'Alliteration',
+        question: 'Question-Based',
+        minimalist: 'Modern Minimalist'
+      };
+
+      /* Curated A-Z Alliteration vocabulary (adjectives + nouns) for crisp phonetic pairing */
+      const ALLITERATION_BANK = {
+        A: { adj: ['After-Hours', 'Actual', 'Audible', 'Artful', 'Authentic', 'All-In'], noun: ['Archive', 'Angle', 'Alibi', 'Audio', 'Agenda', 'Atlas'] },
+        B: { adj: ['Blunt', 'Better', 'Backroom', 'Bright', 'Bold', 'Brutal'], noun: ['Briefing', 'Blueprint', 'Backstory', 'Banter', 'Breakdown', 'Broadcast'] },
+        C: { adj: ['Candid', 'Clever', 'Cold', 'Clear', 'Casual', 'Curious'], noun: ['Chronicles', 'Casebook', 'Club', 'Cut', 'Compass', 'Corner'] },
+        D: { adj: ['Daily', 'Direct', 'Deep', 'Dry', 'Dark', 'Decent'], noun: ['Dispatch', 'Desk', 'Detour', 'Draft', 'Dialogue', 'Dossier'] },
+        E: { adj: ['Everyday', 'Easy', 'Extra', 'Early', 'Edgy', 'Exact'], noun: ['Exchange', 'Edition', 'Evidence', 'Echo', 'Essay', 'Encore'] },
+        F: { adj: ['Fresh', 'Frugal', 'Frank', 'Fast', 'Fearless', 'Firsthand'], noun: ['Files', 'Friction', 'Footnotes', 'Focus', 'Formula', 'Frequency'] },
+        G: { adj: ['Good', 'Grounded', 'Gritty', 'Genuine', 'Great', 'Golden'], noun: ['Guide', 'Ground', 'Grid', 'Gameplan', 'Gossip', 'Gallery'] },
+        H: { adj: ['Honest', 'Hard', 'Hidden', 'High-Stakes', 'Human', 'Half-Baked'], noun: ['Hour', 'Habit', 'Huddle', 'History', 'Headlines', 'House'] },
+        I: { adj: ['Inside', 'Instant', 'Informal', 'Independent', 'Idle', 'Intentional'], noun: ['Index', 'Insider', 'Issue', 'Inbox', 'Inquiry', 'Ink'] },
+        J: { adj: ['Just', 'Jaded', 'Joyful', 'Junior', 'Jagged'], noun: ['Journal', 'Jukebox', 'Junction', 'Journey', 'Jargon'] },
+        K: { adj: ['Keen', 'Kind', 'Kitchen-Table', 'Known', 'Key'], noun: ['Keynote', 'Keepers', 'Kit', 'Kickoff', 'Keepsake'] },
+        L: { adj: ['Late-Night', 'Loose', 'Live', 'Lucid', 'Local', 'Loud'], noun: ['Ledger', 'Log', 'Lineup', 'Lens', 'Lounge', 'Letters'] },
+        M: { adj: ['Modern', 'Midnight', 'Mindful', 'Monday', 'Mildly', 'Measured'], noun: ['Margin', 'Memo', 'Minutes', 'Map', 'Mixtape', 'Method'] },
+        N: { adj: ['No-Filter', 'New', 'Night', 'Naked', 'Nearby', 'Notable'], noun: ['Notes', 'Narrative', 'Notebook', 'Noise', 'Network', 'Numbers'] },
+        O: { adj: ['Open', 'Offbeat', 'Original', 'Ordinary', 'Overdue', 'Outspoken'], noun: ['Outline', 'Outlook', 'Overtime', 'Orbit', 'Origin', 'Observer'] },
+        P: { adj: ['Practical', 'Plain', 'Private', 'Punchy', 'Pocket', 'Patient'], noun: ['Playbook', 'Pulse', 'Papers', 'Press', 'Perspective', 'Principle'] },
+        Q: { adj: ['Quiet', 'Quick', 'Quirky', 'Questionable', 'Quality'], noun: ['Quarter', 'Queue', 'Quarters', 'Query', 'Quotient'] },
+        R: { adj: ['Real', 'Raw', 'Restless', 'Ready', 'Rare', 'Reluctant'], noun: ['Radio', 'Report', 'Record', 'Reset', 'Room', 'Rhythm'] },
+        S: { adj: ['Smart', 'Simple', 'Sharp', 'Sunday', 'Secret', 'Sideways'], noun: ['Signal', 'Session', 'Stories', 'Shift', 'Standard', 'Script'] },
+        T: { adj: ['True', 'Timely', 'Tactful', 'Tough', 'Third-Rail', 'Terse'], noun: ['Tape', 'Table', 'Talks', 'Trail', 'Theory', 'Transcript'] },
+        U: { adj: ['Unfiltered', 'Useful', 'Unsolved', 'Unscripted', 'Unusual', 'Upfront'], noun: ['Update', 'Underground', 'Unit', 'Uncut', 'Union'] },
+        V: { adj: ['Vivid', 'Vocal', 'Verified', 'Vintage', 'Vital'], noun: ['Voice', 'Vault', 'Verdict', 'View', 'Volume'] },
+        W: { adj: ['Working', 'Weekly', 'Witty', 'Wild', 'Warm', 'Wide-Awake'], noun: ['Wire', 'Window', 'Workshop', 'Word', 'Watch', 'Week'] },
+        X: { adj: ['X-Ray', 'Extra', 'Exact'], noun: ['X-Factor', 'Exchange', 'Extras'] },
+        Y: { adj: ['Yearly', 'Young', 'Yellow-Pad'], noun: ['Yardstick', 'Yarns', 'Years'] },
+        Z: { adj: ['Zero-Sum', 'Zero-Filter', 'Zen'], noun: ['Zone', 'Zine', 'Zero'] }
+      };
+
+      const SMALL_WORDS = new Set(['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'from', 'in', 'into', 'nor', 'of', 'on', 'or', 'over', 'per', 'the', 'to', 'up', 'via', 'with', 'without']);
+
+      function toTitleCase(str) {
+        const cleaned = str.replace(/\s+/g, ' ').trim();
+        if (!cleaned) return '';
+        const words = cleaned.split(' ');
+        return words.map(function (word, idx) {
+          if (!word) return '';
+          // Preserve acronyms like AI, NBA, DIY, SaaS, UX, CEO
+          if (/^[A-Z0-9]{2,5}$/.test(word)) return word;
+          if (/^[A-Z][a-z]+[A-Z]/.test(word)) return word;
+          const lower = word.toLowerCase();
+          if (idx > 0 && idx < words.length - 1 && SMALL_WORDS.has(lower)) {
+            return lower;
+          }
+          // Handle hyphenated words like "After-Hours"
+          if (lower.indexOf('-') !== -1) {
+            return lower.split('-').map(function (part) {
+              return part ? part.charAt(0).toUpperCase() + part.slice(1) : '';
+            }).join('-');
+          }
+          return lower.charAt(0).toUpperCase() + lower.slice(1);
+        }).join(' ');
+      }
+
+      function sanitizeTitle(raw) {
+        let s = String(raw || '')
+          .replace(/\s+/g, ' ')
+          .replace(/\s+([?.!,;:])/g, '$1')
+          .replace(/\bThe\s+The\b/gi, 'The')
+          .replace(/\bA\s+(honest|hour|honor|[aeiou])/gi, 'An $1')
+          .replace(/^[:\-–—\s]+|[:\-–—\s]+$/g, '')
+          .trim();
+
+        // Keep trailing punctuation intact while title-casing
+        const punctMatch = s.match(/([?.!]+)$/);
+        const trailingPunct = punctMatch ? punctMatch[1] : '';
+        if (trailingPunct) {
+          s = s.slice(0, -trailingPunct.length);
+        }
+
+        // Preserve segments after colon with capitalized start
+        if (s.indexOf(':') !== -1) {
+          s = s.split(':').map(function (part) {
+            return toTitleCase(part.trim());
+          }).join(': ');
+        } else {
+          s = toTitleCase(s);
+        }
+
+        return s + trailingPunct;
+      }
+
+      function parseTopic(rawTopic, categoryKey) {
+        const cleaned = String(rawTopic || '')
+          .replace(/[^\w\s&'-]/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+
+        const cat = CATEGORY_DATA[categoryKey] || CATEGORY_DATA['business-tech'];
+        if (!cleaned) {
+          return {
+            hasUserTopic: false,
+            full: '',
+            core: '',
+            firstWord: '',
+            words: [],
+            initials: cat.anchors.map(function (w) { return w.charAt(0).toUpperCase(); })
+          };
+        }
+
+        const words = cleaned.split(' ').filter(Boolean);
+        const titledWords = words.map(function (w) {
+          return /^[A-Z0-9]{2,5}$/.test(w) ? w : toTitleCase(w);
+        });
+        const full = toTitleCase(cleaned);
+        const significant = titledWords.filter(function (w) { return !SMALL_WORDS.has(w.toLowerCase()); });
+        const core = significant.length > 0 ? significant[significant.length - 1] : titledWords[titledWords.length - 1];
+        const firstWord = significant.length > 0 ? significant[0] : titledWords[0];
+        const initials = [];
+        [firstWord, core].forEach(function (w) {
+          const ch = (w || '').charAt(0).toUpperCase();
+          if (ch >= 'A' && ch <= 'Z' && initials.indexOf(ch) === -1) {
+            initials.push(ch);
+          }
+        });
+        if (initials.length === 0) initials.push('S');
+
+        return {
+          hasUserTopic: true,
+          full: full,
+          core: core,
+          firstWord: firstWord,
+          words: titledWords,
+          initials: initials
+        };
+      }
+
+      function createRng(seed) {
+        let state = (seed >>> 0) || 1;
+        return function () {
+          state = (state + 0x6D2B79F5) >>> 0;
+          let t = Math.imul(state ^ (state >>> 15), 1 | state);
+          t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+
+      function pick(arr, rng) {
+        return arr[Math.floor(rng() * arr.length)];
+      }
+
+      function shuffle(arr, rng) {
+        const copy = arr.slice();
+        for (let i = copy.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          const tmp = copy[i];
+          copy[i] = copy[j];
+          copy[j] = tmp;
+        }
+        return copy;
+      }
+
+      function buildCandidatesForStyle(styleKey, topicInfo, categoryKey, toneKey, rng) {
+        const cat = CATEGORY_DATA[categoryKey] || CATEGORY_DATA['business-tech'];
+        const tone = TONE_DATA[toneKey] || TONE_DATA.witty;
+
+        const subject = topicInfo.hasUserTopic ? topicInfo.full : pick(cat.anchors, rng);
+        const core = topicInfo.hasUserTopic ? topicInfo.core : pick(cat.anchors, rng);
+        const altAnchor = pick(cat.anchors, rng);
+        const metaphor = pick(cat.metaphors, rng);
+        const verb = pick(cat.verbs, rng);
+        const prefix = pick(tone.prefixes, rng);
+        const suffix = pick(tone.suffixes, rng);
+        const shortMod = pick(tone.shortModifiers, rng);
+        const minTag = pick(tone.minimalistTags, rng);
+
+        // Short display version of topic if user typed a long phrase
+        const compactSubject = topicInfo.hasUserTopic
+          ? (topicInfo.words.length <= 2 ? topicInfo.full : topicInfo.core)
+          : altAnchor;
+
+        if (styleKey === 'short') {
+          const templates = [
+            function () { return compactSubject + ', ' + suffix; },
+            function () { return prefix + ' ' + compactSubject; },
+            function () { return 'The ' + compactSubject + ' ' + metaphor; },
+            function () { return shortMod + ' ' + core; },
+            function () { return core + ' & ' + altAnchor; },
+            function () { return verb + ' ' + compactSubject; },
+            function () { return compactSubject + ' ' + minTag; },
+            function () { return 'Zero-Fluff ' + compactSubject; },
+            function () { return compactSubject + ' Unplugged'; },
+            function () { return 'No-Nonsense ' + core; },
+            function () { return compactSubject + ' After Hours'; },
+            function () { return 'The ' + shortMod + ' ' + core; }
+          ];
+          return shuffle(templates, rng).map(function (fn) { return sanitizeTitle(fn()); });
+        }
+
+        if (styleKey === 'alliteration') {
+          const candidates = [];
+
+          if (topicInfo.hasUserTopic) {
+            const coreWord = topicInfo.core;
+            const coreLetter = coreWord.charAt(0).toUpperCase();
+            const coreBank = ALLITERATION_BANK[coreLetter] || ALLITERATION_BANK.S;
+            const coreAdjs = shuffle(coreBank.adj, rng);
+            const coreNouns = shuffle(coreBank.noun, rng);
+
+            // Anchor on head noun (e.g., "Finance" from "Personal Finance")
+            candidates.push(sanitizeTitle(coreAdjs[0] + ' ' + coreWord));
+            candidates.push(sanitizeTitle(coreWord + ' & ' + coreNouns[0]));
+            candidates.push(sanitizeTitle('The ' + coreWord + ' ' + coreNouns[1 % coreNouns.length]));
+            candidates.push(sanitizeTitle(coreAdjs[1 % coreAdjs.length] + ' ' + coreWord + ' ' + coreNouns[2 % coreNouns.length]));
+            candidates.push(sanitizeTitle(coreWord + ', ' + coreAdjs[2 % coreAdjs.length]));
+            candidates.push(sanitizeTitle(coreAdjs[3 % coreAdjs.length] + ' ' + coreNouns[3 % coreNouns.length] + ': ' + compactSubject));
+            candidates.push(sanitizeTitle(coreAdjs[4 % coreAdjs.length] + ' ' + coreWord));
+            candidates.push(sanitizeTitle(coreWord + ' ' + coreNouns[4 % coreNouns.length]));
+
+            // If multi-word topic (e.g., "Personal Finance"), pair full phrase with first-letter words
+            if (topicInfo.words.length > 1) {
+              const phraseLetter = topicInfo.firstWord.charAt(0).toUpperCase();
+              const phraseBank = ALLITERATION_BANK[phraseLetter] || ALLITERATION_BANK.P;
+              const pAdjs = shuffle(phraseBank.adj, rng);
+              const pNouns = shuffle(phraseBank.noun, rng);
+
+              candidates.push(sanitizeTitle(pAdjs[0] + ' ' + compactSubject));
+              candidates.push(sanitizeTitle(compactSubject + ' ' + pNouns[0]));
+              candidates.push(sanitizeTitle('The ' + compactSubject + ' ' + pNouns[1 % pNouns.length]));
+              candidates.push(sanitizeTitle(pAdjs[1 % pAdjs.length] + ' ' + compactSubject + ' ' + pNouns[2 % pNouns.length]));
+            }
+          } else {
+            shuffle(cat.anchors, rng).slice(0, 6).forEach(function (word) {
+              const letter = word.charAt(0).toUpperCase();
+              const bank = ALLITERATION_BANK[letter] || ALLITERATION_BANK.S;
+              const adjs = shuffle(bank.adj, rng);
+              const nouns = shuffle(bank.noun, rng);
+
+              candidates.push(sanitizeTitle(adjs[0] + ' ' + word));
+              candidates.push(sanitizeTitle(word + ' & ' + nouns[0]));
+              candidates.push(sanitizeTitle('The ' + word + ' ' + nouns[1 % nouns.length]));
+              candidates.push(sanitizeTitle(adjs[1 % adjs.length] + ' ' + word + ' ' + nouns[2 % nouns.length]));
+            });
+          }
+
+          // Extra category-anchored alliterative options for deeper variety
+          shuffle(cat.anchors, rng).slice(0, 5).forEach(function (anchor) {
+            const letter = anchor.charAt(0).toUpperCase();
+            const bank = ALLITERATION_BANK[letter] || ALLITERATION_BANK.P;
+            const adj = pick(bank.adj, rng);
+            const noun = pick(bank.noun, rng);
+            if (topicInfo.hasUserTopic) {
+              candidates.push(sanitizeTitle(adj + ' ' + anchor + ' on ' + core));
+              candidates.push(sanitizeTitle(anchor + ' & ' + noun + ': ' + core));
+            } else {
+              candidates.push(sanitizeTitle(adj + ' ' + anchor));
+              candidates.push(sanitizeTitle(anchor + ' & ' + noun));
+            }
+          });
+
+          return shuffle(candidates, rng);
+        }
+
+        if (styleKey === 'question') {
+          const qTopic = topicInfo.hasUserTopic ? compactSubject : pick(cat.anchors, rng);
+          const qCore = topicInfo.hasUserTopic ? core : pick(cat.anchors, rng);
+          const toneQuestions = {
+            witty: [
+              'Wait, Is ' + qTopic + ' Supposed to Work?',
+              'Who Signed Off on ' + qTopic + '?',
+              'Are We All Faking ' + qTopic + '?',
+              'Why Does ' + qTopic + ' Cost So Much?',
+              'Did Anyone Read the ' + qCore + ' Manual?',
+              'How Bad Could ' + qTopic + ' Get?'
+            ],
+            professional: [
+              'What Actually Drives ' + qTopic + '?',
+              'How Do Leaders Handle ' + qTopic + '?',
+              'Where Is ' + qTopic + ' Headed Next?',
+              'What Works in ' + qTopic + ' Today?',
+              'How Do Pros Measure ' + qCore + '?',
+              'What Changes ' + qTopic + ' Next Year?'
+            ],
+            casual: [
+              'Can We Be Honest About ' + qTopic + '?',
+              'How Are You Handling ' + qTopic + '?',
+              'Wait, What Even Is ' + qTopic + '?',
+              'Why Does ' + qTopic + ' Matter to Us?',
+              'Did You Try That ' + qCore + ' Trick?',
+              'Who Else Overthinks ' + qTopic + '?'
+            ],
+            bold: [
+              'Who Is Lying About ' + qTopic + '?',
+              'Is ' + qTopic + ' Already Dead?',
+              'Why Won’t Anyone Fix ' + qTopic + '?',
+              'What Breaks First in ' + qTopic + '?',
+              'Should We Quit ' + qTopic + ' Altogether?',
+              'Who Really Wins at ' + qCore + '?'
+            ],
+            mysterious: [
+              'What Really Happened to ' + qTopic + '?',
+              'Who Left ' + qTopic + ' Behind?',
+              'Why Did ' + qTopic + ' Disappear?',
+              'What Hides Inside ' + qTopic + '?',
+              'Who Keeps the ' + qCore + ' Secret?',
+              'What Went Missing From ' + qTopic + '?'
+            ]
+          };
+
+          const universalQuestions = [
+            'How Does ' + qTopic + ' Actually Work?',
+            'What Gets Overlooked in ' + qTopic + '?',
+            'Why Do People Care About ' + qTopic + '?',
+            'What Happens After ' + qTopic + '?',
+            'Could ' + qCore + ' Be Simpler?',
+            'Who Gets ' + qTopic + ' Right?'
+          ];
+
+          const baseQs = cat.questions.map(function (tpl) {
+            const t = topicInfo.hasUserTopic ? compactSubject : pick(cat.anchors, rng);
+            return sanitizeTitle(tpl.replace(/\{topic\}/g, t));
+          });
+
+          const extraQs = (toneQuestions[toneKey] || toneQuestions.witty)
+            .concat(universalQuestions)
+            .map(sanitizeTitle);
+          return shuffle(baseQs.concat(extraQs), rng);
+        }
+
+        // Modern Minimalist
+        const minTemplates = [
+          function () { return 'On ' + compactSubject; },
+          function () { return compactSubject + '.'; },
+          function () { return 'The ' + core + ' Desk'; },
+          function () { return 'Quiet ' + compactSubject; },
+          function () { return minTag + ': ' + compactSubject; },
+          function () { return 'After ' + compactSubject; },
+          function () { return compactSubject + ' / ' + minTag; },
+          function () { return 'Subtext: ' + core; },
+          function () { return 'Inside ' + compactSubject; },
+          function () { return 'Field Notes: ' + compactSubject; },
+          function () { return 'Dear ' + core; },
+          function () { return 'Small ' + compactSubject; },
+          function () { return core + ' Index'; },
+          function () { return 'Just ' + compactSubject; }
+        ];
+        return shuffle(minTemplates, rng).map(function (fn) { return sanitizeTitle(fn()); });
+      }
+
+      function getLengthStatus(name) {
+        const len = name.length;
+        if (len <= 30) {
+          return { chars: len, tier: 'optimal', label: 'Fits Apple & Spotify' };
+        }
+        if (len <= 45) {
+          return { chars: len, tier: 'good', label: 'Good length' };
+        }
+        return { chars: len, tier: 'long', label: 'May truncate on mobile' };
+      }
+
+      function generatePodcastNames(options) {
+        const topic = options && typeof options.topic === 'string' ? options.topic : '';
+        const category = (options && CATEGORY_DATA[options.category]) ? options.category : 'business-tech';
+        const tone = (options && TONE_DATA[options.tone]) ? options.tone : 'witty';
+        const style = (options && STYLE_LABELS[options.style]) ? options.style : 'all';
+        const count = (options && options.count) ? options.count : 14;
+        const excludeSet = new Set(
+          ((options && options.exclude) || []).map(function (s) {
+            return String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
+          })
+        );
+        const seed = (options && typeof options.seed === 'number')
+          ? options.seed
+          : Math.floor(Math.random() * 0x7fffffff);
+
+        const rng = createRng(seed);
+        const topicInfo = parseTopic(topic, category);
+        const stylesToUse = style === 'all'
+          ? ['short', 'alliteration', 'question', 'minimalist']
+          : [style];
+
+        const results = [];
+        const seen = new Set();
+        const firstWordCounts = Object.create(null);
+
+        // Multi-pass candidate collection for guaranteed diversity and exact count
+        for (let pass = 0; pass < 8 && results.length < count; pass++) {
+          const orderedStyles = shuffle(stylesToUse, rng);
+          for (let s = 0; s < orderedStyles.length && results.length < count; s++) {
+            const st = orderedStyles[s];
+            const pool = buildCandidatesForStyle(st, topicInfo, category, tone, rng);
+            for (let i = 0; i < pool.length && results.length < count; i++) {
+              const title = pool[i];
+              if (!title || title.length < 3 || title.length > 64) continue;
+              const norm = title.toLowerCase().replace(/[^a-z0-9]/g, '');
+              if (!norm || seen.has(norm)) continue;
+              if (pass < 4 && excludeSet.has(norm)) continue;
+
+              const leadWord = title.split(/\s+/)[0].toLowerCase().replace(/[^a-z0-9]/g, '');
+              const maxLead = style === 'all' ? 2 : 3;
+              if (pass < 4 && (firstWordCounts[leadWord] || 0) >= maxLead) continue;
+
+              seen.add(norm);
+              firstWordCounts[leadWord] = (firstWordCounts[leadWord] || 0) + 1;
+
+              const lengthInfo = getLengthStatus(title);
+              results.push({
+                name: title,
+                style: st,
+                styleLabel: STYLE_LABELS[st],
+                chars: lengthInfo.chars,
+                lengthTier: lengthInfo.tier,
+                lengthLabel: lengthInfo.label
+              });
+
+              // In 'all' mode, rotate styles evenly so every batch feels varied
+              if (style === 'all') break;
+            }
+          }
+        }
+
+        return results;
+      }
+
+      // Expose pure engine for optional automated verification without polluting UI
+      if (typeof window !== 'undefined') {
+        window.__podcastNameEngine = {
+          generatePodcastNames: generatePodcastNames,
+          getLengthStatus: getLengthStatus,
+          parseTopic: parseTopic,
+          sanitizeTitle: sanitizeTitle,
+          CATEGORY_DATA: CATEGORY_DATA,
+          TONE_DATA: TONE_DATA,
+          STYLE_LABELS: STYLE_LABELS
+        };
+      }
+
+      /* =====================================================================
+       * 2. UI STATE, STORAGE & INTERACTIONS (Browser Only)
+       * ===================================================================== */
+      if (typeof document === 'undefined') return;
+
+      const SAVED_KEY = 'podcast_name_gen_saved_v1';
+      const CHECKLIST_KEY = 'podcast_name_gen_checklist_v1';
+
+      const state = {
+        topic: '',
+        category: 'business-tech',
+        tone: 'witty',
+        style: 'all',
+        currentNames: [],
+        lastBatchNames: [],
+        saved: []
+      };
+
+      const els = {
+        form: document.getElementById('generatorForm'),
+        topicInput: document.getElementById('topicInput'),
+        categorySelect: document.getElementById('categorySelect'),
+        toneGroup: document.getElementById('toneGroup'),
+        styleGroup: document.getElementById('styleGroup'),
+        shuffleBtn: document.getElementById('shuffleBtn'),
+        resultsGrid: document.getElementById('resultsGrid'),
+        resultsSummary: document.getElementById('resultsSummary'),
+        openSavedBtn: document.getElementById('openSavedBtn'),
+        closeSavedBtn: document.getElementById('closeSavedBtn'),
+        savedDrawer: document.getElementById('savedDrawer'),
+        drawerBackdrop: document.getElementById('drawerBackdrop'),
+        savedCount: document.getElementById('savedCount'),
+        drawerCount: document.getElementById('drawerCount'),
+        savedEmpty: document.getElementById('savedEmpty'),
+        savedList: document.getElementById('savedList'),
+        copyAllSavedBtn: document.getElementById('copyAllSavedBtn'),
+        clearSavedBtn: document.getElementById('clearSavedBtn'),
+        checklist: document.getElementById('launchChecklist'),
+        checklistStatus: document.getElementById('checklistStatus'),
+        checklistBar: document.getElementById('checklistBar'),
+        infoDialog: document.getElementById('infoDialog'),
+        infoDialogTitle: document.getElementById('infoDialogTitle'),
+        infoDialogBody: document.getElementById('infoDialogBody'),
+        closeInfoDialogBtn: document.getElementById('closeInfoDialogBtn'),
+        srAnnouncer: document.getElementById('srAnnouncer'),
+        footerYear: document.getElementById('footerYear')
+      };
+
+      function announce(msg) {
+        if (!els.srAnnouncer) return;
+        els.srAnnouncer.textContent = '';
+        setTimeout(function () {
+          els.srAnnouncer.textContent = msg;
+        }, 20);
+      }
+
+      function loadSaved() {
+        try {
+          const raw = localStorage.getItem(SAVED_KEY);
+          if (!raw) return [];
+          const parsed = JSON.parse(raw);
+          return Array.isArray(parsed) ? parsed.filter(function (item) {
+            return typeof item === 'string' && item.trim().length > 0;
+          }) : [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function persistSaved() {
+        try {
+          localStorage.setItem(SAVED_KEY, JSON.stringify(state.saved));
+        } catch (e) {
+          // Ignore storage quota errors gracefully
+        }
+      }
+
+      function isSaved(name) {
+        return state.saved.indexOf(name) !== -1;
+      }
+
+      function toggleSaveName(name) {
+        const idx = state.saved.indexOf(name);
+        if (idx === -1) {
+          state.saved.unshift(name);
+          announce('Saved ' + name);
+        } else {
+          state.saved.splice(idx, 1);
+          announce('Removed ' + name + ' from saved names');
+        }
+        persistSaved();
+        renderSavedUI();
+        syncSaveButtonsInGrid();
+      }
+
+      function copyText(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          return navigator.clipboard.writeText(text).catch(function () {
+            return fallbackCopy(text);
+          });
+        }
+        return Promise.resolve(fallbackCopy(text));
+      }
+
+      function fallbackCopy(text) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+        } catch (e) {
+          // Fallback ignored
+        }
+        document.body.removeChild(ta);
+      }
+
+      function buildSearchUrls(name) {
+        const q = encodeURIComponent(name);
+        return {
+          apple: 'https://podcasts.apple.com/us/search?term=' + q,
+          spotify: 'https://open.spotify.com/search/' + q + '/shows'
+        };
+      }
+
+      function createSvgIcon(pathD, filled) {
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('width', '14');
+        svg.setAttribute('height', '14');
+        svg.setAttribute('viewBox', '0 0 24 24');
+        svg.setAttribute('fill', filled ? 'currentColor' : 'none');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('stroke-width', '2');
+        svg.setAttribute('stroke-linecap', 'round');
+        svg.setAttribute('stroke-linejoin', 'round');
+        svg.setAttribute('aria-hidden', 'true');
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', pathD);
+        svg.appendChild(path);
+        return svg;
+      }
+
+      const ICON_COPY = 'M9 9h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2Zm-4 6H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1';
+      const ICON_CHECK = 'M20 6 9 17l-5-5';
+      const ICON_HEART = 'M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z';
+      const ICON_EXT = 'M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6';
+
+      function renderResults() {
+        const frag = document.createDocumentFragment();
+
+        state.currentNames.forEach(function (item) {
+          const li = document.createElement('li');
+          li.className = 'name-card';
+
+          const top = document.createElement('div');
+          top.className = 'name-card-top';
+
+          const textWrap = document.createElement('div');
+          const titleEl = document.createElement('h3');
+          titleEl.className = 'name-title';
+          titleEl.textContent = item.name;
+
+          const meta = document.createElement('p');
+          meta.className = 'name-meta';
+
+          const styleSpan = document.createElement('span');
+          styleSpan.textContent = item.styleLabel;
+
+          const sep1 = document.createElement('span');
+          sep1.setAttribute('aria-hidden', 'true');
+          sep1.textContent = '·';
+
+          const charsSpan = document.createElement('span');
+          charsSpan.textContent = item.chars + ' chars';
+
+          const sep2 = document.createElement('span');
+          sep2.setAttribute('aria-hidden', 'true');
+          sep2.textContent = '·';
+
+          const lenStatus = document.createElement('span');
+          lenStatus.className = 'length-status is-' + item.lengthTier;
+          lenStatus.textContent = item.lengthLabel;
+
+          meta.appendChild(styleSpan);
+          meta.appendChild(sep1);
+          meta.appendChild(charsSpan);
+          meta.appendChild(sep2);
+          meta.appendChild(lenStatus);
+
+          textWrap.appendChild(titleEl);
+          textWrap.appendChild(meta);
+          top.appendChild(textWrap);
+
+          const actions = document.createElement('div');
+          actions.className = 'name-card-actions';
+
+          const leftCluster = document.createElement('div');
+          leftCluster.className = 'action-cluster';
+
+          // Copy button
+          const copyBtn = document.createElement('button');
+          copyBtn.type = 'button';
+          copyBtn.className = 'card-btn';
+          copyBtn.setAttribute('aria-label', 'Copy "' + item.name + '"');
+          copyBtn.appendChild(createSvgIcon(ICON_COPY, false));
+          const copyLabel = document.createElement('span');
+          copyLabel.textContent = 'Copy';
+          copyBtn.appendChild(copyLabel);
+
+          copyBtn.addEventListener('click', function () {
+            copyText(item.name).then(function () {
+              copyBtn.classList.add('is-copied');
+              copyBtn.replaceChild(createSvgIcon(ICON_CHECK, false), copyBtn.firstChild);
+              copyLabel.textContent = 'Copied!';
+              announce('Copied "' + item.name + '" to clipboard');
+              clearTimeout(copyBtn._timer);
+              copyBtn._timer = setTimeout(function () {
+                copyBtn.classList.remove('is-copied');
+                copyBtn.replaceChild(createSvgIcon(ICON_COPY, false), copyBtn.firstChild);
+                copyLabel.textContent = 'Copy';
+              }, 1700);
+            });
+          });
+
+          // Save button
+          const savedNow = isSaved(item.name);
+          const saveBtn = document.createElement('button');
+          saveBtn.type = 'button';
+          saveBtn.className = 'card-btn' + (savedNow ? ' is-saved' : '');
+          saveBtn.dataset.saveTitle = item.name;
+          saveBtn.setAttribute('aria-pressed', savedNow ? 'true' : 'false');
+          saveBtn.setAttribute('aria-label', (savedNow ? 'Remove "' : 'Save "') + item.name + '"');
+          saveBtn.appendChild(createSvgIcon(ICON_HEART, savedNow));
+          const saveLabel = document.createElement('span');
+          saveLabel.textContent = savedNow ? 'Saved' : 'Save';
+          saveBtn.appendChild(saveLabel);
+
+          saveBtn.addEventListener('click', function () {
+            toggleSaveName(item.name);
+          });
+
+          leftCluster.appendChild(copyBtn);
+          leftCluster.appendChild(saveBtn);
+
+          // Check on Apple / Spotify links
+          const urls = buildSearchUrls(item.name);
+          const checkLinks = document.createElement('div');
+          checkLinks.className = 'check-links';
+
+          const appleLink = document.createElement('a');
+          appleLink.className = 'check-link';
+          appleLink.href = urls.apple;
+          appleLink.target = '_blank';
+          appleLink.rel = 'noopener noreferrer';
+          appleLink.setAttribute('aria-label', 'Check "' + item.name + '" on Apple Podcasts');
+          appleLink.appendChild(document.createTextNode('Apple'));
+          appleLink.appendChild(createSvgIcon(ICON_EXT, false));
+
+          const spotifyLink = document.createElement('a');
+          spotifyLink.className = 'check-link';
+          spotifyLink.href = urls.spotify;
+          spotifyLink.target = '_blank';
+          spotifyLink.rel = 'noopener noreferrer';
+          spotifyLink.setAttribute('aria-label', 'Check "' + item.name + '" on Spotify');
+          spotifyLink.appendChild(document.createTextNode('Spotify'));
+          spotifyLink.appendChild(createSvgIcon(ICON_EXT, false));
+
+          checkLinks.appendChild(appleLink);
+          checkLinks.appendChild(spotifyLink);
+
+          actions.appendChild(leftCluster);
+          actions.appendChild(checkLinks);
+
+          li.appendChild(top);
+          li.appendChild(actions);
+          frag.appendChild(li);
+        });
+
+        els.resultsGrid.innerHTML = '';
+        els.resultsGrid.appendChild(frag);
+
+        // Update summary line
+        const catLabel = CATEGORY_DATA[state.category].label;
+        const toneLabel = TONE_DATA[state.tone].label;
+        const styleLabel = STYLE_LABELS[state.style];
+        const topicPart = state.topic.trim() ? ' for "' + state.topic.trim() + '"' : '';
+        els.resultsSummary.innerHTML = '';
+        const countStrong = document.createElement('strong');
+        countStrong.textContent = String(state.currentNames.length);
+        els.resultsSummary.appendChild(document.createTextNode('Showing '));
+        els.resultsSummary.appendChild(countStrong);
+        els.resultsSummary.appendChild(
+          document.createTextNode(' podcast name ideas' + topicPart + ' · ' + catLabel + ' · ' + toneLabel + (state.style !== 'all' ? ' · ' + styleLabel : ''))
+        );
+      }
+
+      function syncSaveButtonsInGrid() {
+        const btns = els.resultsGrid.querySelectorAll('button[data-save-title]');
+        btns.forEach(function (btn) {
+          const title = btn.dataset.saveTitle;
+          const savedNow = isSaved(title);
+          btn.classList.toggle('is-saved', savedNow);
+          btn.setAttribute('aria-pressed', savedNow ? 'true' : 'false');
+          btn.setAttribute('aria-label', (savedNow ? 'Remove "' : 'Save "') + title + '"');
+          btn.replaceChild(createSvgIcon(ICON_HEART, savedNow), btn.firstChild);
+          btn.lastChild.textContent = savedNow ? 'Saved' : 'Save';
+        });
+      }
+
+      function renderSavedUI() {
+        const count = state.saved.length;
+        els.savedCount.textContent = String(count);
+        els.drawerCount.textContent = String(count);
+        els.savedEmpty.hidden = count > 0;
+        els.copyAllSavedBtn.disabled = count === 0;
+        els.clearSavedBtn.disabled = count === 0;
+        els.copyAllSavedBtn.style.opacity = count === 0 ? '0.5' : '1';
+        els.clearSavedBtn.style.opacity = count === 0 ? '0.5' : '1';
+
+        const frag = document.createDocumentFragment();
+        state.saved.forEach(function (name) {
+          const li = document.createElement('li');
+          li.className = 'saved-item';
+
+          const top = document.createElement('div');
+          top.className = 'saved-item-top';
+
+          const nameSpan = document.createElement('span');
+          nameSpan.className = 'saved-item-name';
+          nameSpan.textContent = name;
+
+          const charsSpan = document.createElement('span');
+          charsSpan.className = 'saved-item-chars';
+          charsSpan.textContent = name.length + ' chars';
+
+          top.appendChild(nameSpan);
+          top.appendChild(charsSpan);
+
+          const bottom = document.createElement('div');
+          bottom.className = 'saved-item-actions';
+
+          const leftLinks = document.createElement('div');
+          leftLinks.className = 'check-links';
+          const urls = buildSearchUrls(name);
+
+          const copyBtn = document.createElement('button');
+          copyBtn.type = 'button';
+          copyBtn.className = 'text-action';
+          copyBtn.textContent = 'Copy';
+          copyBtn.setAttribute('aria-label', 'Copy saved name "' + name + '"');
+          copyBtn.addEventListener('click', function () {
+            copyText(name).then(function () {
+              copyBtn.textContent = 'Copied!';
+              setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1500);
+            });
+          });
+
+          const appleA = document.createElement('a');
+          appleA.className = 'check-link';
+          appleA.href = urls.apple;
+          appleA.target = '_blank';
+          appleA.rel = 'noopener noreferrer';
+          appleA.textContent = 'Apple';
+
+          const spotifyA = document.createElement('a');
+          spotifyA.className = 'check-link';
+          spotifyA.href = urls.spotify;
+          spotifyA.target = '_blank';
+          spotifyA.rel = 'noopener noreferrer';
+          spotifyA.textContent = 'Spotify';
+
+          leftLinks.appendChild(copyBtn);
+          leftLinks.appendChild(appleA);
+          leftLinks.appendChild(spotifyA);
+
+          const removeBtn = document.createElement('button');
+          removeBtn.type = 'button';
+          removeBtn.className = 'text-action is-danger';
+          removeBtn.textContent = 'Remove';
+          removeBtn.setAttribute('aria-label', 'Remove "' + name + '" from saved names');
+          removeBtn.addEventListener('click', function () {
+            toggleSaveName(name);
+          });
+
+          bottom.appendChild(leftLinks);
+          bottom.appendChild(removeBtn);
+
+          li.appendChild(top);
+          li.appendChild(bottom);
+          frag.appendChild(li);
+        });
+
+        els.savedList.innerHTML = '';
+        els.savedList.appendChild(frag);
+      }
+
+      function runGeneration() {
+        state.topic = els.topicInput.value;
+        state.category = els.categorySelect.value;
+
+        const generated = generatePodcastNames({
+          topic: state.topic,
+          category: state.category,
+          tone: state.tone,
+          style: state.style,
+          count: 14,
+          exclude: state.lastBatchNames
+        });
+
+        state.currentNames = generated;
+        state.lastBatchNames = generated.map(function (item) { return item.name; });
+        renderResults();
+      }
+
+      /* Drawer Open / Close */
+      let lastFocusBeforeDrawer = null;
+
+      function openDrawer() {
+        lastFocusBeforeDrawer = document.activeElement;
+        els.drawerBackdrop.hidden = false;
+        els.savedDrawer.hidden = false;
+        requestAnimationFrame(function () {
+          els.drawerBackdrop.classList.add('is-open');
+          els.savedDrawer.classList.add('is-open');
+        });
+        els.openSavedBtn.setAttribute('aria-expanded', 'true');
+        els.closeSavedBtn.focus();
+      }
+
+      function closeDrawer() {
+        els.drawerBackdrop.classList.remove('is-open');
+        els.savedDrawer.classList.remove('is-open');
+        els.openSavedBtn.setAttribute('aria-expanded', 'false');
+        setTimeout(function () {
+          els.drawerBackdrop.hidden = true;
+          els.savedDrawer.hidden = true;
+        }, 190);
+        if (lastFocusBeforeDrawer && typeof lastFocusBeforeDrawer.focus === 'function') {
+          lastFocusBeforeDrawer.focus();
+        }
+      }
+
+      /* Checklist persistence */
+      function initChecklist() {
+        const boxes = Array.from(els.checklist.querySelectorAll('input[type="checkbox"]'));
+        let savedChecks = {};
+        try {
+          savedChecks = JSON.parse(localStorage.getItem(CHECKLIST_KEY) || '{}') || {};
+        } catch (e) {
+          savedChecks = {};
+        }
+
+        function updateProgress() {
+          const checkedCount = boxes.filter(function (b) { return b.checked; }).length;
+          const total = boxes.length;
+          els.checklistStatus.textContent = checkedCount + ' of ' + total + ' checks completed';
+          els.checklistBar.style.width = Math.round((checkedCount / total) * 100) + '%';
+        }
+
+        boxes.forEach(function (box) {
+          const id = box.dataset.checkId;
+          if (savedChecks[id]) box.checked = true;
+          box.addEventListener('change', function () {
+            savedChecks[id] = box.checked;
+            try {
+              localStorage.setItem(CHECKLIST_KEY, JSON.stringify(savedChecks));
+            } catch (e) {
+              // Ignore
+            }
+            updateProgress();
+          });
+        });
+
+        updateProgress();
+      }
+
+      /* Footer Dialog content */
+      const INFO_PAGES = {
+        privacy: {
+          title: 'Privacy Policy',
+          paragraphs: [
+            'Podcast Name Generator runs 100% in your browser. Any topic keywords you type and any podcast names you save stay on your device using localStorage—nothing is sent to a server or stored in a database.',
+            'When you click an Apple Podcasts or Spotify availability link, you open those external websites directly under their respective privacy policies.'
+          ]
+        },
+        terms: {
+          title: 'Terms of Use',
+          paragraphs: [
+            'This podcast naming tool is free for personal and commercial brainstorming. Generated title ideas are algorithmic combinations, and we do not claim ownership over any name you pick.',
+            'Availability is not guaranteed. Before publishing a show or registering a business, check Apple Podcasts, Spotify, domain registrars, and the USPTO trademark database.'
+          ]
+        },
+        contact: {
+          title: 'Contact',
+          paragraphs: [
+            'Have a category suggestion, naming pattern idea, or bug report? Reach out at hello@example.com with "Podcast Name Generator" in the subject line.',
+            'Replace this placeholder contact address with your own support email before deploying to production.'
+          ]
+        }
+      };
+
+      function openInfoDialog(key) {
+        const page = INFO_PAGES[key];
+        if (!page || !els.infoDialog) return;
+        els.infoDialogTitle.textContent = page.title;
+        els.infoDialogBody.innerHTML = '';
+        page.paragraphs.forEach(function (text) {
+          const p = document.createElement('p');
+          p.textContent = text;
+          els.infoDialogBody.appendChild(p);
+        });
+        if (typeof els.infoDialog.showModal === 'function') {
+          els.infoDialog.showModal();
+        } else {
+          els.infoDialog.setAttribute('open', '');
+        }
+      }
+
+      /* Event Wiring */
+      els.form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        runGeneration();
+        announce('Generated ' + state.currentNames.length + ' new podcast names');
+      });
+
+      els.categorySelect.addEventListener('change', function () {
+        runGeneration();
+      });
+
+      els.shuffleBtn.addEventListener('click', function () {
+        runGeneration();
+        announce('Generated ' + state.currentNames.length + ' more podcast names');
+      });
+
+      els.toneGroup.addEventListener('click', function (e) {
+        const btn = e.target.closest('button[data-tone]');
+        if (!btn) return;
+        state.tone = btn.dataset.tone;
+        els.toneGroup.querySelectorAll('button[data-tone]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+        runGeneration();
+      });
+
+      els.styleGroup.addEventListener('click', function (e) {
+        const btn = e.target.closest('button[data-style]');
+        if (!btn) return;
+        state.style = btn.dataset.style;
+        els.styleGroup.querySelectorAll('button[data-style]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+        runGeneration();
+      });
+
+      document.querySelectorAll('.quick-topic-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          els.topicInput.value = btn.dataset.topic || '';
+          if (btn.dataset.category && CATEGORY_DATA[btn.dataset.category]) {
+            els.categorySelect.value = btn.dataset.category;
+          }
+          runGeneration();
+          els.topicInput.focus();
+        });
+      });
+
+      els.openSavedBtn.addEventListener('click', openDrawer);
+      els.closeSavedBtn.addEventListener('click', closeDrawer);
+      els.drawerBackdrop.addEventListener('click', closeDrawer);
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && els.savedDrawer.classList.contains('is-open')) {
+          closeDrawer();
+        }
+      });
+
+      els.copyAllSavedBtn.addEventListener('click', function () {
+        if (state.saved.length === 0) return;
+        const text = state.saved.join('\n');
+        copyText(text).then(function () {
+          const original = 'Copy All Saved';
+          els.copyAllSavedBtn.classList.add('is-copied');
+          els.copyAllSavedBtn.textContent = 'Copied ' + state.saved.length + ' ' + (state.saved.length === 1 ? 'name' : 'names') + '!';
+          announce('Copied all saved podcast names');
+          setTimeout(function () {
+            els.copyAllSavedBtn.classList.remove('is-copied');
+            els.copyAllSavedBtn.textContent = original;
+          }, 1800);
+        });
+      });
+
+      els.clearSavedBtn.addEventListener('click', function () {
+        if (state.saved.length === 0) return;
+        state.saved = [];
+        persistSaved();
+        renderSavedUI();
+        syncSaveButtonsInGrid();
+        announce('Cleared all saved podcast names');
+      });
+
+      document.querySelectorAll('.footer-link-btn[data-dialog]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          openInfoDialog(btn.dataset.dialog);
+        });
+      });
+
+      els.closeInfoDialogBtn.addEventListener('click', function () {
+        if (typeof els.infoDialog.close === 'function') {
+          els.infoDialog.close();
+        } else {
+          els.infoDialog.removeAttribute('open');
+        }
+      });
+
+      els.infoDialog.addEventListener('click', function (e) {
+        if (e.target === els.infoDialog && typeof els.infoDialog.close === 'function') {
+          els.infoDialog.close();
+        }
+      });
+
+      /* Initial Boot */
+      if (els.footerYear) {
+        els.footerYear.textContent = String(new Date().getFullYear());
+      }
+      state.saved = loadSaved();
+      renderSavedUI();
+      initChecklist();
+      runGeneration();
+    })();
+  </script>
+</body>
+</html>
